@@ -1,0 +1,49 @@
+<?php 
+    // Parametros a configurar para la conexion de la base de datos 
+    $host = "localhost";    // sera el valor de nuestra BD 
+    $basededatos = "base";    // sera el valor de nuestra BD 
+    $usuariodb = "root";    // sera el valor de nuestra BD 
+    $clavedb = "";    // sera el valor de nuestra BD 
+ 
+    //Lista de Tablas
+    $tabla_db1 = "Empleado";       // tabla de empleados
+     
+     
+    $conexion = mysqli_connect($host,$usuariodb,$clavedb,$basededatos) or die ("Error");
+ 
+    //   https://www.youtube.com/watch?v=OsWBMmbPEig
+?>
+
+<!-- bd con objetos 
+Class Base {
+	$conectado = "";
+	
+	function __construct__() {
+		$host = "localhost";    // sera el valor de nuestra BD 
+		$basededatos = "bd";    // sera el valor de nuestra BD 
+		$usuariodb = "root";    // sera el valor de nuestra BD 
+		$clavedb = "";    // sera el valor de nuestra BD 
+
+		//Lista de Tablas
+		$tabla_db1 = "Empleado"; 	   // tabla de empleados
+		
+		
+		this->$conectado = mysqli_connect($host,$usuariodb,$clavedb,$basededatos) or die ("Error");
+	}
+
+
+	public function ejecutar($sql) {
+		$result_rol = mysqli_query(this->$conectado,$sql);
+		$rows = mysqli_fetch_assoc($result_rol);
+		return($rows)
+		
+	}
+
+	// Parametros a configurar para la conexion de la base de datos 
+	
+   
+	
+	
+}
+
+-->
